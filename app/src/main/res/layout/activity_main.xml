@@ -98,7 +98,7 @@
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
                         app:cardElevation="4dp"
-                        app:cardCornerRadius="100dp"
+                        app:cardCornerRadius="100sp"
                         android:layout_margin="12dp">
 
                         <LinearLayout
@@ -265,7 +265,8 @@
     <!-- Diri ang Vertical Scrollview -->
     <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -581,12 +582,12 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/logo"/>
+                                android:src="@drawable/html"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Lorem"
+                                android:text="HTML"
                                 android:textColor="#6f6f6f"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"/>
@@ -616,12 +617,12 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/logo"/>
+                                android:src="@drawable/css"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Lorem"
+                                android:text="CSS"
                                 android:textColor="#6f6f6f"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"/>
