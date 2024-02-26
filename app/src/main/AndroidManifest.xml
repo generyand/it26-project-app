@@ -16,12 +16,6 @@
             android:name=".Activity2"
             android:exported="false" />
         <activity
-            android:name=".activity2"
-            android:exported="false" />
-        <activity
-            android:name=".activity2"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
