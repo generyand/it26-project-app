@@ -1,6 +1,7 @@
 package com.example.thisapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    public CardView java, javascript, nextjs;
     private Button button;
 
     @Override
@@ -29,11 +31,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        java = (CardView) findViewById(R.id.java);
+        java.setOnClickListener(this::onClick);
+
+        javascript = (CardView) findViewById(R.id.javascript);
+        javascript.setOnClickListener(this::onClick);
+
+        nextjs = (CardView) findViewById(R.id.nextjs);
+        nextjs.setOnClickListener(this::onClick);
 
     }
 
     public void openActivity2() {
         Intent intent = new Intent(this, Activity2.class);
         startActivity(intent);
+    }
+
+    public void onClick(View view) {
+        Intent i;
+
+        if (view.getId() == R.id.java) {
+            i = new Intent(this, Java.class);
+            startActivity(i);
+        } else if (view.getId() == R.id.javascript) {
+            i = new Intent(this, Javascript.class);
+            startActivity(i);
+        } else if (view.getId() == R.id.nextjs) {
+            i = new Intent(this, NextJS.class);
+            startActivity(i);
+        }
     }
 }
