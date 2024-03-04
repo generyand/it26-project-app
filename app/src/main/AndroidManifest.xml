@@ -19,7 +19,7 @@
             android:name=".Javascript"
             android:exported="false" />
         <activity
-            android:name=".Games"
+            android:name=".Java"
             android:exported="false" />
         <activity
             android:name=".Activity2"

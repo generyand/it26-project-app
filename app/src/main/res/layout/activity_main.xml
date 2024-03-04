@@ -98,22 +98,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
-                        android:layout_rowWeight="1"
                         app:cardElevation="4dp"
                         app:cardCornerRadius="100sp"
                         android:layout_margin="12dp">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:orientation="vertical"
                             android:gravity="center"
-                            android:padding="16dp">
+                            android:padding="16dp"
+                            android:background="@drawable/p1">
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/java"/>
+
 
                         </LinearLayout>
 
@@ -124,22 +121,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
-                        android:layout_rowWeight="1"
                         app:cardElevation="4dp"
-                        app:cardCornerRadius="100dp"
+                        app:cardCornerRadius="100sp"
                         android:layout_margin="12dp">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:orientation="vertical"
                             android:gravity="center"
-                            android:padding="16dp">
+                            android:padding="16dp"
+                            android:background="@drawable/p2">
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/java"/>
+
 
                         </LinearLayout>
 
@@ -150,22 +144,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
-                        android:layout_rowWeight="1"
                         app:cardElevation="4dp"
-                        app:cardCornerRadius="100dp"
+                        app:cardCornerRadius="100sp"
                         android:layout_margin="12dp">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:orientation="vertical"
                             android:gravity="center"
-                            android:padding="16dp">
+                            android:padding="16dp"
+                            android:background="@drawable/p3">
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/java"/>
+
 
                         </LinearLayout>
 
@@ -176,22 +167,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
-                        android:layout_rowWeight="1"
                         app:cardElevation="4dp"
-                        app:cardCornerRadius="100dp"
+                        app:cardCornerRadius="100sp"
                         android:layout_margin="12dp">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:orientation="vertical"
                             android:gravity="center"
-                            android:padding="16dp">
+                            android:padding="16dp"
+                            android:background="@drawable/p4">
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/java"/>
+
 
                         </LinearLayout>
 
@@ -202,22 +190,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
-                        android:layout_rowWeight="1"
                         app:cardElevation="4dp"
-                        app:cardCornerRadius="100dp"
+                        app:cardCornerRadius="100sp"
                         android:layout_margin="12dp">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:orientation="vertical"
                             android:gravity="center"
-                            android:padding="16dp">
+                            android:padding="16dp"
+                            android:background="@drawable/p5">
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/java"/>
+
 
                         </LinearLayout>
 
@@ -228,22 +213,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
-                        android:layout_rowWeight="1"
                         app:cardElevation="4dp"
-                        app:cardCornerRadius="100dp"
+                        app:cardCornerRadius="100sp"
                         android:layout_margin="12dp">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:orientation="vertical"
                             android:gravity="center"
-                            android:padding="16dp">
+                            android:padding="16dp"
+                            android:background="@drawable/p6">
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/java"/>
+
 
                         </LinearLayout>
 
