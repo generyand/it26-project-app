@@ -16,15 +16,14 @@
         android:orientation="vertical"
         android:layout_marginBottom="16dp">
 
-
         <LinearLayout
             android:id="@+id/infoWrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/border3"
+
             android:orientation="horizontal"
-            android:layout_marginTop="28dp"
-            android:layout_marginLeft="28dp"
-            android:layout_marginRight="28dp">
+            android:padding="28dp">
 
             <ImageView
                 android:id="@+id/imageView"
