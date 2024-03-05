@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@drawable/gradient">
+    tools:context=".MainActivity">
 
     <!-- Header -->
     <LinearLayout
@@ -20,8 +19,6 @@
             android:id="@+id/infoWrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/border3"
-
             android:orientation="horizontal"
             android:padding="28dp">
 
@@ -44,29 +41,26 @@
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
                     android:text="Gene Ryan Depalubos"
-                    android:textColor="#FFFFFF"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/sourcesans3bold"/>
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
                     android:textSize="16sp"
                     android:text="aceron.generyan@gmail.com"
-                    android:textColor="#FFFFFF" />
+                    android:fontFamily="@font/sourcesans3regular"/>
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:text="09123123456"
+                    android:text="09191972929"
                     android:textSize="16sp"
-                    android:textColor="#FFFFFF" />
+                    android:fontFamily="@font/sourcesans3regular"/>
 
             </LinearLayout>
 
@@ -74,11 +68,34 @@
 
         </LinearLayout>
 
+
+    </LinearLayout>
+
+
+    <!-- Diri ang Vertical Scrollview -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradient">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Programming Languages"
+            android:layout_margin="16dp"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/sourcesans3bold"/>
+
         <HorizontalScrollView
             android:contentDescription="s"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars="none">
+            android:scrollbars="none"
+            android:layout_marginBottom="20dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -91,146 +108,81 @@
                     android:rowCount="1"
                     android:alignmentMode="alignMargins"
                     android:columnOrderPreserved="false"
-                    android:layout_marginHorizontal="18dp">
+                    android:layout_marginHorizontal="10dp">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        app:cardElevation="4dp"
-                        app:cardCornerRadius="100sp"
-                        android:layout_margin="12dp">
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="8dp"
+                        android:padding="4dp"
+                        android:background="@drawable/border3">
 
-                        <LinearLayout
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:padding="16dp"
-                            android:background="@drawable/p1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="16sp"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/sourcesans3bold"
+                            android:text="Most Popular"
+                            android:gravity="center"/>
 
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="8dp"
+                        android:padding="4dp"
+                        android:background="@drawable/border3">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="16sp"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/sourcesans3bold"
+                            android:text="Most Used"
+                            android:gravity="center"/>
 
-                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="8dp"
+                        android:padding="4dp"
+                        android:background="@drawable/border3">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="16sp"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/sourcesans3bold"
+                            android:text="Most Loved"
+                            android:gravity="center"/>
 
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="8dp"
+                        android:padding="4dp"
+                        android:background="@drawable/border3">
 
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        app:cardElevation="4dp"
-                        app:cardCornerRadius="100sp"
-                        android:layout_margin="12dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="16sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/sourcesans3bold"
+                            android:textStyle="bold"
+                            android:text="Most Hated"
+                            android:gravity="center"/>
 
-                        <LinearLayout
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:padding="16dp"
-                            android:background="@drawable/p2">
+                    </LinearLayout>
 
-
-
-                        </LinearLayout>
-
-
-
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        app:cardElevation="4dp"
-                        app:cardCornerRadius="100sp"
-                        android:layout_margin="12dp">
-
-                        <LinearLayout
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:padding="16dp"
-                            android:background="@drawable/p3">
-
-
-
-                        </LinearLayout>
-
-
-
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        app:cardElevation="4dp"
-                        app:cardCornerRadius="100sp"
-                        android:layout_margin="12dp">
-
-                        <LinearLayout
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:padding="16dp"
-                            android:background="@drawable/p4">
-
-
-
-                        </LinearLayout>
-
-
-
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        app:cardElevation="4dp"
-                        app:cardCornerRadius="100sp"
-                        android:layout_margin="12dp">
-
-                        <LinearLayout
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:padding="16dp"
-                            android:background="@drawable/p5">
-
-
-
-                        </LinearLayout>
-
-
-
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        app:cardElevation="4dp"
-                        app:cardCornerRadius="100sp"
-                        android:layout_margin="12dp">
-
-                        <LinearLayout
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:padding="16dp"
-                            android:background="@drawable/p6">
-
-
-
-                        </LinearLayout>
-
-
-
-                    </androidx.cardview.widget.CardView>
 
 
                 </GridLayout>
@@ -243,10 +195,8 @@
 
         </HorizontalScrollView>
 
-    </LinearLayout>
 
-    <!-- Diri ang Vertical Scrollview -->
-    <ScrollView
+        <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -273,9 +223,9 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
-                        app:cardElevation="4dp"
                         app:cardCornerRadius="12dp"
-                        android:layout_margin="12dp">
+                        android:background="@drawable/border_stroke"
+                        android:layout_margin="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -295,6 +245,7 @@
                                 android:text="Java"
                                 android:textColor="#6f6f6f"
                                 android:textSize="18sp"
+                                android:fontFamily="@font/sourcesans3regular"
                                 android:layout_marginTop="10dp"/>
 
                         </LinearLayout>
@@ -307,9 +258,8 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
-                        app:cardElevation="4dp"
                         app:cardCornerRadius="12dp"
-                        android:layout_margin="12dp">
+                        android:layout_margin="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -328,6 +278,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Javascript"
                                 android:textColor="#6f6f6f"
+                                android:fontFamily="@font/sourcesans3regular"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"/>
 
@@ -341,8 +292,7 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
-                        app:cardElevation="4dp"
-                        app:cardCornerRadius="12dp"
+                        app:cardCornerRadius="8dp"
                         android:layout_margin="12dp">
 
                         <LinearLayout
@@ -362,6 +312,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="NextJS"
                                 android:textColor="#6f6f6f"
+                                android:fontFamily="@font/sourcesans3regular"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"/>
 
@@ -374,8 +325,7 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
-                        app:cardElevation="4dp"
-                        app:cardCornerRadius="12dp"
+                        app:cardCornerRadius="8dp"
                         android:layout_margin="12dp">
 
                         <LinearLayout
@@ -396,6 +346,7 @@
                                 android:text="NodeJS"
                                 android:textColor="#6f6f6f"
                                 android:textSize="18sp"
+                                android:fontFamily="@font/sourcesans3regular"
                                 android:layout_marginTop="10dp"/>
 
                         </LinearLayout>
@@ -407,9 +358,8 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
-                        app:cardElevation="4dp"
                         app:cardCornerRadius="12dp"
-                        android:layout_margin="12dp">
+                        android:layout_margin="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -428,6 +378,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="PHP"
                                 android:textColor="#6f6f6f"
+                                android:fontFamily="@font/sourcesans3regular"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"/>
 
@@ -440,9 +391,8 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
-                        app:cardElevation="4dp"
                         app:cardCornerRadius="12dp"
-                        android:layout_margin="12dp">
+                        android:layout_margin="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -461,6 +411,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Python"
                                 android:textColor="#6f6f6f"
+                                android:fontFamily="@font/sourcesans3regular"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"/>
 
@@ -475,9 +426,8 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
-                        app:cardElevation="4dp"
                         app:cardCornerRadius="12dp"
-                        android:layout_margin="12dp">
+                        android:layout_margin="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -496,6 +446,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="React"
                                 android:textColor="#6f6f6f"
+                                android:fontFamily="@font/sourcesans3regular"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"/>
 
@@ -510,9 +461,8 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
-                        app:cardElevation="4dp"
                         app:cardCornerRadius="12dp"
-                        android:layout_margin="12dp">
+                        android:layout_margin="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -531,6 +481,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Swift"
                                 android:textColor="#6f6f6f"
+                                android:fontFamily="@font/sourcesans3regular"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"/>
 
@@ -545,9 +496,8 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
-                        app:cardElevation="4dp"
                         app:cardCornerRadius="12dp"
-                        android:layout_margin="12dp">
+                        android:layout_margin="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -566,6 +516,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="HTML"
                                 android:textColor="#6f6f6f"
+                                android:fontFamily="@font/sourcesans3regular"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"/>
 
@@ -580,9 +531,8 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:layout_rowWeight="1"
-                        app:cardElevation="4dp"
                         app:cardCornerRadius="12dp"
-                        android:layout_margin="12dp">
+                        android:layout_margin="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -601,6 +551,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="CSS"
                                 android:textColor="#6f6f6f"
+                                android:fontFamily="@font/sourcesans3regular"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"/>
 
@@ -642,7 +593,6 @@
         </ScrollView>
 
 
-
-
+    </LinearLayout>
 
 </LinearLayout>
