@@ -1,28 +1,34 @@
 package com.example.thisapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private Button nextButton;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -47,6 +53,21 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        CardView cardView = (CardView) getView().findViewById(R.id.java);
+        CardView cardView2 = (CardView) getView().findViewById(R.id.javascript);
+        CardView cardView3 = (CardView) getView().findViewById(R.id.nextjs);
+        nextButton = (Button) getView().findViewById(R.id.nextButton);
+
+        // Find the CardView and set click listener
+        cardView.setOnClickListener(this);
+        cardView2.setOnClickListener(this);
+        cardView3.setOnClickListener(this);
+        nextButton.setOnClickListener(this);
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
@@ -60,5 +81,26 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.java) {
+            // Navigate to another activity
+            Intent intent = new Intent(getActivity(), Java.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.javascript) {
+            // Navigate to another activity
+            Intent intent = new Intent(getActivity(), Java.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.nextjs) {
+            // Navigate to another activity
+            Intent intent = new Intent(getActivity(), NextJS.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.nextButton) {
+            // Navigate from button click
+            Intent intent = new Intent(getActivity(), Activity2.class);
+            startActivity(intent);
+        }
     }
 }

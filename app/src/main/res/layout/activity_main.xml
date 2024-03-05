@@ -20,6 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/menu"
+        app:itemIconTint="@drawable/bottom_navigation_selector"
+        app:itemTextColor="@drawable/bottom_navigation_selector"
+        android:background="@color/white"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
