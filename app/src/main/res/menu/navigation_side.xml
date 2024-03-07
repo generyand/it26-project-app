@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/nav_msg"
+        android:icon="@drawable/baseline_message_24"
+        android:title="Message"/>
+
+    <item
+        android:title="More Options">
+        <menu
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/baseline_settings_24"
+                android:title="Settings"/>
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/baseline_logout_24"
+                android:title="Logout"/>
+
+
+        </menu>
+    </item>
+
+
+</menu>
