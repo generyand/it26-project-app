@@ -2,9 +2,14 @@ package com.example.thisapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +18,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.thisapp.databinding.ActivityMainBinding;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
     public CardView java, javascript, nextjs;
@@ -31,6 +37,22 @@ public class MainActivity extends AppCompatActivity {
         );
         setContentView(R.layout.activity_main);
 
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        HomeFragment homeFragment = new HomeFragment();
+//        fragmentTransaction.replace(R.id.frame_out, homeFragment);
+//        fragmentTransaction.commit();
+//
+//        // Initialize DrawerLayout after setContentView
+//        final DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+//
+//        findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                drawerLayout.openDrawer(GravityCompat.START);
+//            }
+//        });
+
         // Bottom Nav
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -47,6 +69,25 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
+
+        /* Side Nav */
+//        NavigationView navigationView = findViewById(R.id.navigation_view);
+//        navigationView.setItemIconTintList(null); // If you have custom icons
+//        NavController navController = Navigation.findNavController(this, R.id.sideNavHostFragment);
+//        NavigationUI.setupWithNavController(navigationView, navController);
+//        navigationView.setNavigationItemSelectedListener(item -> {
+//            if (item.getItemId() == R.id.nav_home) {
+//                repFragment(new SideHomeFragment());
+//            } else if (item.getItemId() == R.id.nav_profile) {
+//                repFragment(new SideProfileFragment());
+//            } else if (item.getItemId() == R.id.nav_msg) {
+//                repFragment(new SideSettingsFragment());
+//            } else if (item.getItemId() == R.id.nav_settings) {
+//                repFragment(new SideSettingsFragment());
+//            }
+//            drawerLayout.closeDrawer(GravityCompat.START); // Close drawer after selection
+//            return true;
+//        });
 
 //        button = (Button) findViewById(R.id.nextButton);
 //        button.setOnClickListener(new View.OnClickListener() {
