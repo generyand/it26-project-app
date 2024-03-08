@@ -1,5 +1,6 @@
 package com.example.thisapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
@@ -7,15 +8,18 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.widget.Toolbar;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.thisapp.databinding.ActivityMainBinding;
 import com.google.android.material.navigation.NavigationView;
@@ -23,6 +27,10 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
     public CardView java, javascript, nextjs;
     private Button button;
+
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private NavController navController;
 
     ActivityMainBinding binding;
 
@@ -37,21 +45,86 @@ public class MainActivity extends AppCompatActivity {
         );
         setContentView(R.layout.activity_main);
 
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        HomeFragment homeFragment = new HomeFragment();
-//        fragmentTransaction.replace(R.id.frame_out, homeFragment);
-//        fragmentTransaction.commit();
+        /***************** DILI MOGANA AAAAAAAAAAAA *****************/
+//        drawerLayout = findViewById(R.id.drawer_layout);
+//        navigationView = findViewById(R.id.navigation_view);
 //
-//        // Initialize DrawerLayout after setContentView
-//        final DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+//        // Set navigation drawer menu
+//        navigationView.inflateMenu(R.menu.navigation_side);
 //
-//        findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
+//        // Handle navigation item clicks
+//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 //            @Override
-//            public void onClick(View view) {
+//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//                int itemId = menuItem.getItemId();
+//
+//            if (itemId == R.id.nav_home) {
+//                repFragment(new SideHomeFragment());
+//            } else if (itemId == R.id.nav_profile) {
+//                repFragment(new SideProfileFragment());
+//            } else if (itemId == R.id.nav_msg) {
+//                repFragment(new SideSettingsFragment());
+//            } else if (itemId == R.id.nav_settings) {
+//                repFragment(new SideSettingsFragment());
+//            }
+//
+//                // Close the drawer after selection
+//                drawerLayout.closeDrawer(GravityCompat.START);
+//                return true;
+//            }
+//        });
+//
+//        // Optional: Set a listener for the hamburger menu icon
+//        Toolbar toolbar = findViewById(R.id.layoutToolbar); // Assuming you have a toolbar
+//        setSupportActionBar(toolbar);
+//        toolbar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 //                drawerLayout.openDrawer(GravityCompat.START);
 //            }
 //        });
+
+
+        /***************** OPTION 2 DILI SAD MOGANA AAAAAAAAAAAA *****************/
+//        drawerLayout = findViewById(R.id.drawer_layout);
+//
+//        // Initialize NavigationView and set navigation graph
+//        navigationView = findViewById(R.id.navigation_view);
+//        navController = Navigation.findNavController(this, R.id.sideNavHostFragment);
+//        NavigationUI.setupWithNavController(navigationView, navController);
+//
+//        // Handle menu item clicks for side navigation
+//        navigationView.setNavigationItemSelectedListener(item -> {
+//            int itemId = item.getItemId();
+//            if (itemId == R.id.nav_home) {
+//                navController.navigate(R.id.nav_home);
+//            } else if (itemId == R.id.nav_profile) {
+//                navController.navigate(R.id.nav_profile);
+//            } else if (itemId == R.id.nav_msg) {
+//                navController.navigate(R.id.nav_msg);
+//            } else if (itemId == R.id.nav_settings) {
+//                navController.navigate(R.id.nav_settings);
+//            }
+//            drawerLayout.closeDrawer(GravityCompat.START);
+//            return true;
+//        });
+//
+//        // Optional: Set a listener for the hamburger menu icon
+//        Toolbar toolbar = findViewById(R.id.layoutToolbar); // Assuming you have a toolbar
+//        if (toolbar != null) {
+//            setSupportActionBar(toolbar);
+//            toolbar.setNavigationOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
+//        }
+
+
+
+
+
+
+
+
+
+
 
         // Bottom Nav
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -70,41 +143,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
-        /* Side Nav */
-//        NavigationView navigationView = findViewById(R.id.navigation_view);
-//        navigationView.setItemIconTintList(null); // If you have custom icons
-//        NavController navController = Navigation.findNavController(this, R.id.sideNavHostFragment);
-//        NavigationUI.setupWithNavController(navigationView, navController);
-//        navigationView.setNavigationItemSelectedListener(item -> {
-//            if (item.getItemId() == R.id.nav_home) {
-//                repFragment(new SideHomeFragment());
-//            } else if (item.getItemId() == R.id.nav_profile) {
-//                repFragment(new SideProfileFragment());
-//            } else if (item.getItemId() == R.id.nav_msg) {
-//                repFragment(new SideSettingsFragment());
-//            } else if (item.getItemId() == R.id.nav_settings) {
-//                repFragment(new SideSettingsFragment());
-//            }
-//            drawerLayout.closeDrawer(GravityCompat.START); // Close drawer after selection
-//            return true;
-//        });
-
-//        button = (Button) findViewById(R.id.nextButton);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openActivity2();
-//            }
-//        });
-//
-//        java = (CardView) findViewById(R.id.java);
-//        java.setOnClickListener(this::onClick);
-//
-//        javascript = (CardView) findViewById(R.id.javascript);
-//        javascript.setOnClickListener(this::onClick);
-//
-//        nextjs = (CardView) findViewById(R.id.nextjs);
-//        nextjs.setOnClickListener(this::onClick);
 
     }
 
@@ -115,23 +153,4 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-//    public void openActivity2() {
-//        Intent intent = new Intent(this, Activity2.class);
-//        startActivity(intent);
-//    }
-//
-//    public void onClick(View view) {
-//        Intent i;
-//
-//        if (view.getId() == R.id.java) {
-//            i = new Intent(this, Java.class);
-//            startActivity(i);
-//        } else if (view.getId() == R.id.javascript) {
-//            i = new Intent(this, Javascript.class);
-//            startActivity(i);
-//        } else if (view.getId() == R.id.nextjs) {
-//            i = new Intent(this, NextJS.class);
-//            startActivity(i);
-//        }
-//    }
 }
