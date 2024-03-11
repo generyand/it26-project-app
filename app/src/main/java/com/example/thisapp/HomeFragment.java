@@ -91,7 +91,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             startActivity(intent);
         } else if (v.getId() == R.id.javascript) {
             // Navigate to another activity
-            Intent intent = new Intent(getActivity(), Java.class);
+            Intent intent = new Intent(getActivity(), Javascript.class);
             startActivity(intent);
         } else if (v.getId() == R.id.nextjs) {
             // Navigate to another activity
