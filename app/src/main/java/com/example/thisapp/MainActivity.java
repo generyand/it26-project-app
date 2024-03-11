@@ -18,7 +18,7 @@ import com.example.thisapp.databinding.ActivityMainBinding;
 
 
 public class MainActivity extends AppCompatActivity {
-    public CardView java, javascript, nextjs;
+//    public CardView java, javascript, nextjs;
     private Button button;
 
     ActivityMainBinding binding;
