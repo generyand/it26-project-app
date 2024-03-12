@@ -7,20 +7,59 @@
     android:orientation="vertical"
     tools:context=".Activity2">
 
-    <TextView
+    <ScrollView
+        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is activity 2"
-        android:textSize="24sp"
-        android:gravity="center_horizontal"
-        android:layout_centerVertical="true"/>
+        android:paddingHorizontal="20dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/programming"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How Programming Shapes our World"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/read_more"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/read_more2"
+                android:layout_marginBottom="180dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <Button
         android:id="@+id/previousButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Previous"
-        android:layout_marginHorizontal="16dp"
+        android:layout_margin="20dp"
+        android:text="Go Back"
+        android:textColor="#fff"
+        android:background="@drawable/custom_button"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
